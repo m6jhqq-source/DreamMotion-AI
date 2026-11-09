@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090812"><title>DreamMotion AI — استوديو صناعة الفيديو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<header class="topbar">
+ <a class="brand" href="#"><span class="brand-mark">✦</span><span>DreamMotion <b>AI</b></span></a>
+ <nav><a href="#studio" data-i18n="studio">الاستوديو</a><a href="#gallery" data-i18n="gallery">معرض الأعمال</a><a href="#about" data-i18n="about">حول المنصة</a></nav>
+ <div class="top-actions"><button id="lang" class="ghost">EN</button><span class="free-pill">FREE • DEMO</span></div>
+</header>
+<main>
+<section class="hero">
+ <div class="eyebrow"><span class="pulse"></span><span data-i18n="eyebrow">استوديو إبداعي مدعوم بالذكاء الاصطناعي</span></div>
+ <h1 data-i18n="headline">حوّل خيالك إلى <span>مشهد سينمائي</span></h1>
+ <p data-i18n="subhead">اكتب فكرتك أو أضف صورة، وحضّر مشهدك القادم من مكان واحد.</p>
+ <div class="hero-tags"><span>✦ Text to Video</span><span>▧ Image to Video</span><span>◈ Creative Studio</span></div>
+</section>
+<section id="studio" class="studio panel">
+ <div class="section-head"><div><div class="kicker">CREATE / 01</div><h2 data-i18n="createTitle">أنشئ فيديو جديد</h2></div><span class="status"><i></i><span data-i18n="demoStatus">وضع العرض المجاني</span></span></div>
+ <div class="workspace">
+  <div class="form-side">
+   <label class="field-label" for="prompt" data-i18n="promptLabel">صف الفيديو الذي تتخيله</label>
+   <textarea id="prompt" maxlength="1200" placeholder="مثال: لقطة سينمائية لمدينة مستقبلية ليلاً، أضواء نيون وانعكاسات المطر، حركة كاميرا بطيئة..." data-placeholder="مثال: لقطة سينمائية لمدينة مستقبلية ليلاً، أضواء نيون وانعكاسات المطر، حركة كاميرا بطيئة..."></textarea>
+   <div class="under-field"><span data-i18n="promptHint">كلما كان الوصف أدق كانت النتيجة أقرب لرؤيتك.</span><span id="count">0 / 1200</span></div>
+   <div class="field-label upload-label" data-i18n="imageLabel">صورة مرجعية (اختياري)</div>
+   <label class="upload-box" for="image"><span class="upload-icon">＋</span><span><b data-i18n="uploadTitle">أضف صورة</b><small data-i18n="uploadHint">PNG أو JPG • حتى 12MB</small></span><input id="image" type="file" accept="image/png,image/jpeg,image/webp"></label>
+   <div id="fileName" class="file-name"></div>
+   <div class="options">
+    <div><label class="field-label" data-i18n="ratio">نسبة الأبعاد</label><select id="ratio"><option value="9:16">9:16 — Reels / TikTok</option><option value="16:9">16:9 — YouTube</option><option value="1:1">1:1 — Square</option></select></div>
+    <div><label class="field-label" data-i18n="quality">الجودة المطلوبة</label><select id="quality"><option>720p</option><option>1080p</option><option>2K</option></select></div>
+   </div>
+   <button id="generate" class="primary"><span>✦</span><span data-i18n="generate">إنشاء الفيديو</span><span class="arrow">←</span></button>
+   <p class="fineprint" data-i18n="fineprint">الموقع في وضع العرض. التوليد الحقيقي يتطلب مزود فيديو متاحاً ومهيأً.</p>
+   <div id="message" class="message" role="status"></div>
+  </div>
+  <div class="preview-side">
+   <div class="preview-label"><span data-i18n="preview">معاينة الاستوديو</span><span>LIVE PREVIEW</span></div>
+   <div class="preview-frame" id="previewFrame"><div class="preview-orb">✦</div><div class="preview-copy"><b data-i18n="previewTitle">قصتك تبدأ هنا</b><span data-i18n="previewSub">اكتب وصفاً إبداعياً لبدء مشروعك</span></div><div class="frame-corner c1"></div><div class="frame-corner c2"></div></div>
+   <div class="preview-foot"><span>✧ DREAMMOTION ENGINE</span><span id="engine">DEMO MODE</span></div>
+  </div>
+ </div>
+</section>
+<section id="gallery" class="gallery-section">
+ <div class="section-head"><div><div class="kicker">YOUR CREATIONS / 02</div><h2 data-i18n="galleryTitle">معرض أعمالك</h2></div><span class="muted" data-i18n="galleryHint">تظهر هنا الفيديوهات التي تم إنشاؤها</span></div>
+ <div id="galleryGrid" class="gallery-grid"><div class="empty"><span>▧</span><b data-i18n="emptyTitle">لا توجد فيديوهات بعد</b><small data-i18n="emptySub">ستجد مشاريعك هنا بعد إتمام التوليد.</small></div></div>
+</section>
+<section id="about" class="about panel"><div><div class="kicker">DREAM BIG / CREATE MORE</div><h2 data-i18n="aboutTitle">مساحة واحدة لأفكار بلا حدود</h2><p data-i18n="aboutText">DreamMotion AI واجهة إبداعية لتجربة صناعة الفيديو بالذكاء الاصطناعي. هذه النسخة مجهزة للنشر ويمكن ربطها بمزود توليد متوافق عند توفر الوصول إليه.</p></div><div class="about-symbol">✦</div></section>
+</main>
+<footer><span>© 2026 DreamMotion AI</span><span data-i18n="footer">صُنع للإبداع • النسخة التجريبية</span></footer>
+<script src="/app.js"></script>
+</body></html>
