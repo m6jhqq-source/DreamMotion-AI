@@ -139,7 +139,7 @@ app.post("/api/generate", upload.single("image"), async (req, res) => {
       payload = {
         name: "DreamMotion AI Image",
         end_seconds: 5,
-        model: "ltx-2.3",
+        model: "ltx-2.5",
         resolution,
         style: { prompt },
         assets: { image_file_path: asset.file_path }
