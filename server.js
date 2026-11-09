@@ -84,7 +84,7 @@ app.post("/api/generate", upload.single("image"), async (req, res) => {
       ? req.body.ratio : "9:16";
 
     // نستخدم إعداداً مناسباً كبداية لتجنب اختيار موديل غير مدعوم.
-    const resolution = ["480p", "720p"].includes(req.body.quality)
+    const resolution = ["480p",].includes(req.body.quality)
       ? req.body.quality : "480p";
 
     let endpoint = "/v1/text-to-video";
